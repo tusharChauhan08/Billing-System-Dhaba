@@ -63,7 +63,6 @@ let counter=true;
 let showCounter=false;
 let updation=false;
 let deletion=false;
-let bill=false;
 let employeer=false;
 let dishe=false;
 let updateDish=false;
@@ -78,6 +77,14 @@ app.get("/logout",(req,res)=>{
         show=false;
         counter=true;
         showEmployee=true;
+        updation=false;
+        deletion=false;
+        employeer=false;
+        dishe=false;
+        updateDish=false;
+        showEmployee=false;
+        billing=false;
+        showBill=false;
         return res.redirect("/login");
     }); 
 });
@@ -411,7 +418,7 @@ app.get("/counter",employeeAuth,(req,res)=>{
         }
         Dish.find({},(err,result1)=>{
             if (err) throw err;
-            res.render("billcounter",{counter,showCounter,result,updation,editor,result1,bill,billing});
+            res.render("billcounter",{counter,showCounter,result,updation,editor,result1,billing});
         })
     });
 });
@@ -506,6 +513,7 @@ app.get("/employee",(req,res)=>{
     show=true;
     counter=false;
     showEmployee=false;
+    showBill=true;
     Biller.find({},(err,result)=>{
         if (err) throw err;
         let sr=1;
