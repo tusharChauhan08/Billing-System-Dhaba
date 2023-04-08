@@ -516,5 +516,5 @@ app.get("/employee",(req,res)=>{
         res.render("viewEmployee",{result,show,counter,showEmployee});
     })
 });
-app.listen(process.env.PORT || 5080);
+app.listen(5080);
 console.log("Server is started at the port 5080...");
