@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Counter</title>
+    <link rel="stylesheet" href="/navbar.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/button.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/adminView.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/all.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <div class="main-div">
+        {{>navbar}}
+        <div class="table-div">
+            <table class="biller-table">
+                <thead>
+                    <tr>
+                        <td>Sr-no.</td>
+                        <td>Customer-Name</td>
+                        <td>Total-Bill</td>
+                        <td>Amount</td>
+                        <td>Order</td>
+                        <td>Button</td>
+                        <td>Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each result}}
+                    <tr>
+                        <td>{{__v}}</td>
+                        <td>{{Customer_Name}}</td>
+                        <td>{{Quantity}}</td>
+                        <td>{{Order}}</td>
+                        <td>{{Total_bill}}</td>
+                        <td>
+                            <a href="/editor">Edit</a>
+                        </td>
+                        <td>{{Date}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        {{#if editor}}
+            {{>editBill}}
+        {{/if}}
+        {{#if billing}}
+            {{>bill}}
+        {{/if}}
+    </div>
+    <script src="/JQuery/jquery-3.6.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.biller-table').DataTable();
+        });
+    </script>
+</body>
+
+</html>

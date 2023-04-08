@@ -1,0 +1,148 @@
+:root{
+    --color:#373b61;
+    --delete-background:#ffffff;
+    --background-color:#A7D5E5; 
+    --background:#FCEFE9;
+    --font-weight:500;
+    --font-size-p:14px;
+    --font-size-button:16px;
+    --font-size-label:16px;
+    --font-size-heading:25px;
+    --font-size-icon:18px;
+    --font-size-nav:19px;
+    --font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    margin:0;
+    width:100%;
+    height:100vh;
+    background-color:var(--background);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position:relative;
+    font-family:var(--font-family);
+}
+.error-div{
+    width:80%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    position:absolute;
+    top:40px;
+}
+.main-div{
+    width:80%;
+    height:600px;
+    background-color:var(--background-color);
+    display:flex;
+    border-radius:8px;
+}
+.main-div .form-div,
+.main-div .img-div{
+    width:50%;
+    height:inherit;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+.main-div .form-div form{
+    width:100%;
+    height:inherit;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.main-div .img-div img{
+    width:100%;
+    height:inherit;
+}
+.heading-div,
+.name-div,
+.email-div,
+.mobile-div,
+.secret-div,
+.button-div,
+.password-div{
+    width:50%;
+    height:60px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    margin-bottom:10px;
+}
+.heading-div{
+    height:60px;
+    align-items:center;
+    margin-right:10%;
+}
+.heading-div h3{
+    margin:0;
+    font-size:var(--font-size-heading);
+    font-weight:var(--font-weight);
+    color:var(--color);
+}
+.heading-div p{
+    margin:0;
+    font-size:var(--font-size-p); 
+    color:var(--color);
+}
+label{
+    font-size:var(--font-size-label);
+    color:var(--color);
+    font-weight:var(--font-weight);
+}
+input{
+    width:80%;
+    height:35px;
+    box-sizing:border-box;
+    color:var(--color);
+    font-weight:var(--font-weight);
+    border-radius:8px;
+    outline:none;
+    border:1px solid var(--color); 
+    padding:0px 10px 0px 10px;
+}
+.button-div{
+    height:60px;
+    align-items:center;
+    margin-right:10%;
+}
+.button-div input{
+    width:40%;
+    height:35px;
+    box-sizing:border-box;
+    color:var(--color);
+    font-weight:bold;
+    border-radius:8px;
+    outline:none;
+    border:1px solid var(--color); 
+    font-size: var(--font-size-button);
+    background-color:var(--delete-background);
+    cursor:pointer;
+    margin-bottom:5px;
+}
+.button-div input:hover{
+    background-color:var(--color);
+    color:var(--background-color);
+}
+span{
+    font-size:var(--font-size-p);
+    color:var(--color);
+}
+span a{
+    font-size:var(--font-size-p);
+    color:var(--color); 
+    font-weight:var(--font-weight);
+}
+span a:hover{
+    color:black;
+}
+.error{
+    font-size:18px;
+    color:var(--color);
+}

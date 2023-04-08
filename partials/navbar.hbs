@@ -1,0 +1,45 @@
+
+    <div class="nav-div">
+        <div class="logo-div">
+            <img src="/img/kisspng-punjabi-cuisine-indian-cuisine-punjabi-language-yu-punjabi-rasoi-nearest-indian-restaurant-in-somers-5c76a5630e2944.761589331551279459058.png" alt="">
+        </div>
+        <div class="button-div">
+            {{#if show}}
+                <div class="login-div">
+                    <a href="/dishes"><i class="fa-solid fa-file-circle-plus"></i>Add Dish</a>
+                </div>
+                {{#if showEmployee}}
+                    <div class="login-div">
+                        <a href="/employee"><i class="fa-solid fa-person"></i>View Employee</a>
+                    </div>
+                {{/if}}
+                {{#if showBill}}
+                    <div class="login-div">
+                        <a href="/showBill"><i class="fa-sharp fa-solid fa-file-invoice"></i>View Bill</a>
+                    </div>
+                {{/if}}
+                <div class="login-div">
+                    <a href="/biller"><i class="fa-solid fa-person-circle-plus"></i>Add Employee</a>
+                </div>
+                <div class="login-div">
+                    <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                </div>
+            {{/if}}
+            {{#if counter}}
+                <div class="sign-div">
+                    <a href="/sign"><i class="fa-solid fa-user-astronaut"></i> SignUp</a>
+                </div>
+                <div class="login-div">
+                    <a href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </div>
+            {{/if}}
+            {{#if showCounter}}
+                <div class="login-div">
+                    <a href="/bill"><i class="fa-solid fa-file-circle-plus"></i>Bill</a>
+                </div>
+                <div class="login-div">
+                    <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                </div>
+            {{/if}}
+        </div>
+    </div>

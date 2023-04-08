@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css" type="text/css" media="all">
+</head>
+<body>
+    {{#if updation}}
+        <div class="error-div">
+            <span class="error">Please enter all the details.</span>
+        </div>
+    {{/if}}
+    {{#if login}}
+        <div class="error-div">
+            <span class="error">Please enter the correct details! or Register yourself</span>
+        </div>
+    {{/if}}
+    <div class="main-div">
+        <div class="pic-div">
+            <img src="/img/waiter serving.webp" alt="">
+        </div>
+        <div class="form-div">
+            <form action="/loging" method="post">
+                <div class="heading-div">
+                    <h3>Welcome back</h3>
+                    <p>Welcome back! Please enter your details.</p>
+                </div>
+                <div class="select-div">
+                    <label for="">Who Are You?:</label>
+                    <select name="admin" id="admin">
+                        <option value="">Select</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Employee">Employee</option>
+                    </select>
+                </div>
+                <div class="user-div">
+                    <label for="">User Id:</label>
+                    <input type="email" placeholder="Enter User Id" name="email">
+                </div>
+                <div class="password-div">
+                    <label for="">Password:</label>
+                    <input type="password" placeholder="Enter your Password" name="password">
+                </div>
+                <div class="submit-div">
+                    <input type="submit"  value="Login">
+                    <span>Don't have an account? <a href="/sign">Sign up</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

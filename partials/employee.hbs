@@ -1,0 +1,33 @@
+{{#if updation}}
+    <div class="error-div">
+        <span class="error">Please enter all the details!</span>
+    </div>
+{{/if}}
+<div class="form-div">
+    <form action="/billed" method="post">
+        <div class="heading-div">
+            <h3>Welcome</h3>
+            <p>Please enter the detials of the Biller for the Bill Counter.</p>
+        </div>
+        <div class="biller-div">
+            <label for="">Biller-Name:</label>
+            <input type="text" placeholder="Enter Biller name" name="name">
+        </div>
+        <div class="user-div">
+            <label for="">Biller-id:</label>
+            <input type="email" placeholder="Enter the email" name="email">
+        </div>
+        <div class="password-div">
+            <label for="">Password:</label>
+            <input type="password" name="password" placeholder="Enter the password">
+        </div>
+        <div class="date-div2">
+            <label for="">Date:</label>
+            <input type="date" name="date">
+        </div>
+        <div class="submit-div">
+            <input type="submit" value="Added">
+            <span>Back to the Home Page? <a href="/home">Home</a></span>
+        </div>
+    </form>
+</div>

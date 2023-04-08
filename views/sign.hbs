@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/sign.css" type="text/css" media="all">
+</head>
+<body>
+            {{#if updation}}
+                <div class="error-div">
+                    <span class="error">Please provided all the details!</span>
+                </div>
+            {{/if}}
+            {{#if exist}}
+                <div class="error-div">
+                    <span class="error">You have already SignUp please try to Login.</span>
+                </div>
+            {{/if}}
+    <div class="main-div">
+        <div class="form-div">
+            <form action="/signin" method="post">
+                <div class="heading-div">
+                    <h3>Welcome</h3>
+                    <p>Create your account here for free!</p>
+                </div>
+                <div class="name-div">
+                    <label for="">Name:</label>
+                    <input type="text" placeholder="Enter your Full Name" name="name">
+                </div>
+                <div class="email-div">
+                    <label for="">Email:</label>
+                    <input type="email" placeholder="Enter your Email-Id" name="email">
+                </div>
+                <div class="mobile-div">
+                    <label for="">Mobile-no:</label>
+                    <input type="text" placeholder="Enter your Mobile-no" name="mobile">
+                </div>
+                <div class="secret-div">
+                    <label for="">Property/Lease Paper No:</label>
+                    <input type="text" placeholder="Enter Property/Lease no:" name="secret">
+                </div>
+                <div class="password-div">
+                    <label for="">Password:</label>
+                    <input type="password" placeholder="Enter your Password" name="password">
+                </div>
+                <div class="button-div">
+                    <input type="submit" value="Sign Up">
+                    <span>If you have already an account! <a href="/login">Login</a></span>
+                </div>
+            </form>
+        </div>
+        <div class="img-div">
+            <img src="img/—Pngtree—indian food talley curry soup_6814449.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

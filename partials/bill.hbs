@@ -1,0 +1,46 @@
+{{#if updation}}
+    <div class="error-div">
+        <span class="error">Please enter all the details of the customer!</span>
+    </div>
+{{/if}}
+<div class="form-div1">
+    <form action="/billing" method="post">
+        <div class="heading-div">
+            <h3>Welcome</h3>
+            <p>Please enter Bill of the Customer for the Bill.</p>
+        </div>
+        <div class="biller-div">
+            <label for="">Customer-Name:</label>
+            <input type="text" placeholder="Enter Customer name" name="customer">
+        </div>
+        <div class="select-div2">
+            <label for="">Quantity:</label>
+            <select name="quantity" id="">
+                <option value="select">Select</option>
+                <option value="Half">Half</option>
+                <option value="Full">Full</option>
+            </select>
+        </div>
+        <div class="select-div3">
+            <label for="">Order:</label>
+            <select name="order" id="">
+                <option value="select">Select</option>
+                {{#each result}}
+                <option value="{{Dish_Name}}">{{Dish_Name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="total-div">
+            <label for="">Total-bill:</label>
+            <input type="text" name="amount" placeholder="Enter the Total Bill">
+        </div>
+        <div class="date-div3">
+            <label for="">Date:</label>
+            <input type="date" name="date">
+        </div>
+        <div class="submit-div">
+            <input type="submit" value="Bill">
+            <span>Back to the Home Page? <a href="/homing">Home</a></span>
+        </div>
+    </form>
+</div>

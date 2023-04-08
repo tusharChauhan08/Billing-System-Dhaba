@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <link rel="stylesheet" href="/adminView.css" media="all" type="text/css">
+    <link rel="stylesheet" href="/css/all.min.css" media="all" type="text/css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <div class="main-div">
+        {{>navbar}}
+        <div class="table-div">
+            <table class="Admin-Table">
+                <thead>
+                    <tr>
+                        <td>Sr-no.</td>
+                        <td>Employee-Name</td>
+                        <td>Employee-Id</td>
+                        <td>Button</td>
+                        <td>Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each result}}
+                        <tr>
+                            <td>{{__v}}</td>
+                            <td>{{Biller_Name}}</td>
+                            <td>{{Biller_id}}</td>
+                            <td>
+                                <a href="/editEmployee">Edit</a>
+                            </td>
+                            <td>{{Date}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/JQuery/jquery-3.6.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.Admin-Table').DataTable();
+        });      
+    </script>
+</body>
+
+</html>

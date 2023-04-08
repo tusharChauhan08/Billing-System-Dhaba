@@ -1,0 +1,41 @@
+{{#if updation}}
+    <div class="error-div">
+        <span class="error">Please enter all the details!</span>
+    </div>
+{{/if}}
+<div class="edit-div">
+    <form action="/edited" method="post">
+        <div class="heading-div">
+            <h3>Welcome</h3>
+            <p>Please enter the details of the customer you want to edit.</p>
+        </div>
+        <div class="dish-div">
+            <label for="">Customer-Name:</label>
+            <input type="text" placeholder="Enter customer name whose bill you update." name="customer">
+        </div>
+        <div class="customer-div">
+            <label for="">Customer-Name:</label>
+            <input type="text" placeholder="Enter update customer name." name="update">
+        </div>
+        <div class="name-div">
+            <label for="">Order:</label>
+            <input type="text" placeholder="Enter update order of the customer." name="dish">
+        </div>
+        <div class="total-div">
+            <label for="">Total-Bill:</label>
+            <input type="text" placeholder="Enter the update Total bill amount." name="bill">
+        </div>
+        <div class="select-div">
+            <label for="">Quantity:</label>
+            <select name="quantity" id="">
+                <option value="">Select</option>
+                <option value="Half">Half</option>
+                <option value="Full">Full</option>
+            </select>
+        </div>
+        <div class="submit-div">
+            <input type="submit" value="Update">
+            <span>Back to the Home Page? <a href="/homing">Home</a></span>
+        </div>
+    </form>
+</div>

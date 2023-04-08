@@ -1,0 +1,320 @@
+:root{
+    --color:#373b61;
+    --delete-background:#ffffff;
+    --background-color:#A7D5E5; 
+    --background:#FCEFE9;
+    --font-weight:500;
+    --font-size-p:14px;
+    --font-size-button:16px;
+    --font-size-label:16px;
+    --font-size-heading:25px;
+    --font-size-icon:18px;
+    --font-size-nav:19px;
+    --font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    margin:0;
+    width:100%;
+    height:auto;
+    font-family:var(--font-family);
+}
+.nav-div{
+    width:100%;
+    height:70px;
+    display:flex;
+    background-color:var(--background-color);
+    justify-content:space-between;  
+    margin-bottom:15px;
+    font-family:var(--font-family);
+}
+.nav-div .logo-div{
+    width:15%;
+    height:inherit;
+    text-align:center;
+}
+.nav-div .logo-div img{
+    width:48%;
+    height:70px;
+}
+.button-div{
+    width: 50%;
+    height:inherit;
+    display:flex;
+    justify-content:flex-end;
+}
+.sign-div,
+.login-div{
+    width:25%;
+    height:inherit;
+    text-align:center;
+    line-height:70px;
+}
+.sign-div i,
+.login-div i{
+    font-size:var(--font-size-nav);
+    color:var(--color);
+    margin-right:4px;
+}
+.sign-div a,
+.login-div a{
+    font-size:var(--font-size-label);
+    color:var(--color);
+    font-weight:var(--font-weight);
+    text-decoration:none;
+}
+.sign-div a:hover,
+.login-div a:hover{
+    color:black;
+}
+.sign-div a:hover i,
+.login-div a:hover i{
+    color: black;
+}
+.main-div{
+    width:100%;
+    height:auto;
+    background-color:var(--delete-background); 
+    position:relative;  
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.main-div .table-div{
+    width:99.6%;
+    height:auto;
+    margin-right:0;
+    color:var(--color);
+    font-weight:var(--font-weight); 
+    cursor:pointer;
+    background-color:var(--background-color);
+}
+.main-div .table-div tbody tr td a{
+    text-decoration:none;
+    color:var(--color);
+}
+.main-div .table-div tbody tr td a:hover{
+    color:black;
+    text-decoration:underline;
+}
+.delete-div,
+.edit-div,
+.form-div,
+.form-div1{
+    width:25%;
+    height:300px;
+    background-color:var(--background);  
+    border-radius:8px;
+    position:absolute;
+    left:35%;
+    top:50%;
+    box-shadow:0px 1px 4px;
+}
+.form-div1{
+    width:28%;
+    height:420px;
+}
+.form-div{
+    width:25%;
+    height:380px;
+}
+.edit-div{
+    width:30%;
+    height:500px;
+}
+form{
+    width:100%;
+    height:inherit;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius:8px;
+    justify-content:space-evenly;
+}
+form .heading-div{
+    width:100%;
+    height:60px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:10px;
+}
+.heading-div h3{
+    margin:0;
+    font-size:var(--font-size-heading);
+    color:var(--color);
+    font-weight:var(--font-weight);    
+}
+.heading-div p{
+    margin:0;
+    font-size:13px;
+    color:var(--color);
+}
+form .dish-div,
+.customer-div,
+.name-div,
+.total-div,
+.select-div,
+.select-div1,
+.select-div2,
+.select-div3,
+.submit-div,
+.biller-div,
+.user-div,
+.password-div,
+.price-div,
+.price-div1,
+.date-div,
+.details-div,
+.date-div1,
+.date-div2,
+.total-div,
+.date-div3{
+    width:100%;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.select-div1 label{
+    margin-left:20px;
+}
+.select-div2 label{
+    margin-left:12%;
+}
+.select-div3 label{
+    margin-left:16%;
+}
+.date-div3 label{
+    margin-left:18%;
+}
+.total-div label{
+    margin-left:11%;
+}
+.details-div label{
+    margin-left:3%;
+}
+.date-div1 label{
+    margin-left:6%;
+}
+.date-div2 label{
+    margin-left:12%;
+}
+.submit-div{
+    height:60px;
+    flex-direction: column;
+}
+.date-div label{
+    margin-left:11%;
+}
+.price-div1 label{
+    margin-left:6%;
+}
+.price-div label{
+    margin-left:11%;
+}
+label{
+    font-size:16px;
+    color:var(--color);
+    font-weight:var(--font-weight);
+}
+.delete-div form .dish-div label{
+    margin-left:25px;
+}
+.form-div form .user-div label{
+    margin-left:25px;
+}
+.form-div form .password-div label{
+    margin-left:15px;
+}
+.edit-div form .name-div label{
+    margin-left:16%;
+}
+.edit-div form .total-div label,
+.edit-div form .select-div label{
+    margin-left:11%;
+}
+.select-div select,
+.select-div1 select,
+.select-div2 select,
+.select-div3 select{
+    width:60%;
+    height:34px;
+    box-sizing:border-box;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:500; 
+    color:var(--color);
+    background-color:var(--delete-background);
+    outline:none;
+    margin-left:10px;
+    border:1px solid var(--color);  
+}
+input{
+    width:60%;
+    height:33px;
+    box-sizing:border-box;
+    border-radius:8px;
+    outline:none;
+    border:1px solid var(--color);
+    background-color:var(--delete-background);
+    color:var(--color);
+    padding:0px 10px 0px 10px;
+    margin-left:10px;
+    font-size:var(--font-size-p);
+    font-weight:var(--font-weight);
+}
+
+::placeholder{
+    color:var(--color);
+    font-size:13px;
+    font-weight:100;
+}
+
+.submit-div input{
+    width:30%;
+    height:35px;
+    border-radius:8px;
+    outline:none;
+    cursor:pointer;
+    box-sizing:border-box;
+    font-size:var(--font-size-button);
+    color:var(--color);
+    background-color:var(--delete-background);
+    font-weight:bold;
+    cursor:pointer;
+    margin:0px 0px 5px 25px;
+}
+.submit-div input:hover{
+    background-color:var(--color);   
+    color:var(--background-color);
+}
+span{
+    color:var(--color);
+    font-size:14px;
+    margin-left:15px;
+}
+span a{
+    color:var(--color);
+    font-weight:var(--font-weight);
+    font-size:15px;
+}
+span a:hover{
+    color:black;
+}
+.error-div{
+    width:80%;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:70px;
+    left:130px;
+}
+.error-div .error{
+    font-size:18px;
+    color:var(--color);
+    font-weight:bold;
+}
