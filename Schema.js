@@ -1,7 +1,7 @@
 let mongoose=require("mongoose");
 mongoose.set('strictQuery', true);
-let mongoURI="mongodb://127.0.0.1:27017/?directConnection=true/Bill-counter";
-mongoose.connect("mongodb://127.0.0.1:27017/?directConnection=true/Bill-counter")
+let mongoURI="mongodb://127.0.0.1:27017/Bill-counter?directConnection=true";
+mongoose.connect("mongodb://127.0.0.1:27017/Bill-counter?directConnection=true")
 .then(console.log("Server connected"))
 .catch("Server is not connected");
 
