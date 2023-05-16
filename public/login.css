@@ -159,14 +159,13 @@ span a:hover{
 .error-div{
     width:80%;
     height:40px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:absolute;
-    top:0px;
-    left: 48%;  
+    position:relative;
+    top:-20px; 
 }
 .error-div .error{
+    position:absolute;
+    top:10px;
+    left:38%;
     font-size:17px;
     color:var(--color);
     text-decoration:underline;
